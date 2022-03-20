@@ -342,6 +342,4 @@ public class ArraysAndStrings {
         return isSubstring(s2, s1);
     }
 
-
-
 }
