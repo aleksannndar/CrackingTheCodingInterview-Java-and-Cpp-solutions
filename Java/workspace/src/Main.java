@@ -1,33 +1,16 @@
 public class Main {
     public static void main(String[] args){
-        int[][] matrix = new int[6][6];
-        for(int i = 0; i < 6; i++){
-            for(int j = 0; j < 6; j++){
-                matrix[i][j] = i + j;
-            }
-        }
+        LinkedLists.Node root = new LinkedLists.Node(1);
+        LinkedLists.Node e1 = new LinkedLists.Node(3);
+        root.next = e1;
+        LinkedLists.Node e2 = new LinkedLists.Node(2);
+        e1.next = e2;
+        LinkedLists.Node e3 = new LinkedLists.Node(3);
+        e2.next = e3;
 
-        matrix[0][0] = 2;
-        matrix[0][5] = 0;
-        matrix[3][4] = 0;
 
-        for(int i = 0; i < 6; i++){
-            for(int j = 0; j < 6; j++){
-                System.out.print(matrix[i][j] + " ");
-            }
-            System.out.println();
-        }
-        System.out.println();
-        System.out.println();
-        System.out.println();
+        LinkedLists.Node kthLst = LinkedLists.solution2b(root, 2);
 
-        ArraysAndStrings.solution8b(matrix);
-
-        for(int i = 0; i < 6; i++){
-            for(int j = 0; j < 6; j++){
-                System.out.print(matrix[i][j] +" ");
-            }
-            System.out.println();
-        }
+        System.out.println(kthLst.data);
     }
 }
