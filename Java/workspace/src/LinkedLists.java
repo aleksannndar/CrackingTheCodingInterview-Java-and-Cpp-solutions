@@ -1,7 +1,4 @@
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
 
 public class LinkedLists {
 
@@ -134,5 +131,176 @@ public class LinkedLists {
         return leftPartition;
     }
 
+    //space O(n), time O(n), without destroying input lists
+    static Node solution5a(Node first, Node second){
+        if(first == null)
+            return second;
 
+        if(second == null)
+            return first;
+
+        Node root = null;
+        Node current = root;
+
+        int carry = 0;
+        while(first != null && second != null){
+            if(current != null) {
+                current.next = new Node((first.data + second.data + carry) % 10);
+                current = current.next;
+            }
+            else {
+                current = new Node((first.data + second.data + carry) % 10);
+            }
+            carry = (first.data + second.data + carry) / 10;
+            first = first.next;
+            second = second.next;
+        }
+
+        Node longerList = first == null ? second : first;
+        while(longerList != null){
+            current.next = new Node((first.data + second.data + carry) % 10);
+            current = current.next;
+            longerList = longerList.next;
+        }
+        if(carry > 0){
+            current.next = new Node(carry);
+        }
+
+        return root;
+    }
+
+    //space O(n), time O(n), recursive solution
+    static Node solution5b(Node first, Node second, int carry){
+        if(first == null && second == null && carry == 0)
+            return null;
+
+        Node n = new Node(carry);
+        if(first != null)
+            n.data += first.data;
+
+        if(second != null)
+            n.data += second.data;
+
+        carry = n.data / 10;
+        n.data = n.data % 10;
+
+        if(first != null || second != null) {
+            first = first == null ? null : first.next;
+            second = second == null ? null : second.next;
+
+            Node next = solution5b(first, second, carry);
+            n.next = next;
+        }
+
+        return n;
+    }
+
+    //space O(n), time O(n)
+    static boolean solution6a(Node root){
+        if(root == null)
+            return false;
+
+        Node runner = root;
+        Stack<Integer> dataStack = new Stack<>();
+
+        while(runner != null){
+            dataStack.push(root.data);
+            root = root.next;
+            runner = runner.next;
+            if(runner == null) {
+                dataStack.pop();
+                break;
+            }
+            runner = runner.next;
+        }
+
+        while(root != null){
+            if(root.data != dataStack.pop())
+                return false;
+            root = root.next;
+        }
+
+        return true;
+    }
+
+    //space O(1), time O(n)
+    static Node solution7a(Node l1, Node l2){
+        if(l1 == null || l2 == null)
+            return null;
+
+        Node tmpL1 = l1;
+        Node tmpL2 = l2;
+        int lengthL1 = 0;
+        int lengthL2 = 0;
+
+        while(tmpL1 != null){
+            lengthL1++;
+            tmpL1 = tmpL1.next;
+        }
+
+        while(tmpL2 != null){
+            lengthL2++;
+            tmpL2 = tmpL2.next;
+        }
+
+        Node longer = lengthL1 > lengthL2 ? l1 : l2;
+        Node shorter = lengthL1 <= lengthL2 ? l1 : l2;
+
+        for(int i =0; i< Math.abs(lengthL1 - lengthL2); i++){
+            longer = longer.next;
+        }
+
+        while(longer != null){
+            if(longer == shorter)
+                return longer;
+
+            longer = longer.next;
+            shorter = shorter.next;
+        }
+        return null;
+    }
+
+    //space O(n), time O(n)
+    static Node solution8a(Node root){
+        if(root == null)
+            return null;
+
+        HashSet<Node> nodeAppeared = new HashSet<>();
+
+        while(root != null){
+            if(nodeAppeared.contains(root)) {
+                return root;
+            }
+            else{
+                nodeAppeared.add(root);
+            }
+            root = root.next;
+        }
+
+        return null;
+    }
+
+    //space O(1), time O(n)
+    static Node solution8b(Node root){
+        Node slow = root;
+        Node fast = root;
+
+        while(fast != null && fast.next != null){
+            fast = fast.next.next;
+            slow = slow.next;
+            if(fast == slow)
+                break;
+        }
+
+        if(fast == null || fast.next == null)
+            return null;
+
+        fast = root;
+        while(fast != slow){
+            fast = fast.next;
+            slow = slow.next;
+        }
+
+        return fast;
+    }
 }
