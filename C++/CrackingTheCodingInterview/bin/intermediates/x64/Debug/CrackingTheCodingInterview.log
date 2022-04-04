@@ -1,0 +1,12 @@
+﻿  Playground.cpp
+E:\Programiranje\CrackingTheCodingInterview\C++\CrackingTheCodingInterview\CrackingTheCodingInterview\include\ArraysAndStrings.h(4,41): warning C4227: anachronism used: qualifiers on reference are ignored
+E:\Programiranje\CrackingTheCodingInterview\C++\CrackingTheCodingInterview\CrackingTheCodingInterview\include\ArraysAndStrings.h(6,41): warning C4227: anachronism used: qualifiers on reference are ignored
+E:\Programiranje\CrackingTheCodingInterview\C++\CrackingTheCodingInterview\CrackingTheCodingInterview\include\ArraysAndStrings.h(8,38): warning C4227: anachronism used: qualifiers on reference are ignored
+E:\Programiranje\CrackingTheCodingInterview\C++\CrackingTheCodingInterview\CrackingTheCodingInterview\include\ArraysAndStrings.h(8,61): warning C4227: anachronism used: qualifiers on reference are ignored
+E:\Programiranje\CrackingTheCodingInterview\C++\CrackingTheCodingInterview\CrackingTheCodingInterview\include\ArraysAndStrings.h(12,41): warning C4227: anachronism used: qualifiers on reference are ignored
+E:\Programiranje\CrackingTheCodingInterview\C++\CrackingTheCodingInterview\CrackingTheCodingInterview\include\ArraysAndStrings.h(14,38): warning C4227: anachronism used: qualifiers on reference are ignored
+E:\Programiranje\CrackingTheCodingInterview\C++\CrackingTheCodingInterview\CrackingTheCodingInterview\include\ArraysAndStrings.h(14,61): warning C4227: anachronism used: qualifiers on reference are ignored
+E:\Programiranje\CrackingTheCodingInterview\C++\CrackingTheCodingInterview\CrackingTheCodingInterview\include\ArraysAndStrings.h(16,38): warning C4227: anachronism used: qualifiers on reference are ignored
+E:\Programiranje\CrackingTheCodingInterview\C++\CrackingTheCodingInterview\CrackingTheCodingInterview\include\ArraysAndStrings.h(16,61): warning C4227: anachronism used: qualifiers on reference are ignored
+E:\Programiranje\CrackingTheCodingInterview\C++\CrackingTheCodingInterview\CrackingTheCodingInterview\include\ArraysAndStrings.h(18,48): warning C4227: anachronism used: qualifiers on reference are ignored
+  CrackingTheCodingInterview.vcxproj -> E:\Programiranje\CrackingTheCodingInterview\C++\CrackingTheCodingInterview\bin\x64\Debug\CrackingTheCodingInterview.exe
