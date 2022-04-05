@@ -148,9 +148,11 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="include\ArraysAndStrings.h" />
+    <ClInclude Include="include\LinkedLists.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\ArraysAndStrings.cpp" />
+    <ClCompile Include="src\LinkedLists.cpp" />
     <ClCompile Include="src\Playground.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

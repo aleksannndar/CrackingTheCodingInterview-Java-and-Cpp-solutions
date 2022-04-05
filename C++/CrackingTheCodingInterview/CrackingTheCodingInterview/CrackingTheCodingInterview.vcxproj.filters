@@ -18,12 +18,18 @@
     <ClInclude Include="include\ArraysAndStrings.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="include\LinkedLists.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\ArraysAndStrings.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\Playground.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\LinkedLists.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
