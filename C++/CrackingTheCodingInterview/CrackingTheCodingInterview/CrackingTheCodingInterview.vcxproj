@@ -149,11 +149,13 @@
   <ItemGroup>
     <ClInclude Include="include\ArraysAndStrings.h" />
     <ClInclude Include="include\LinkedLists.h" />
+    <ClInclude Include="include\StacksAndQueues.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\ArraysAndStrings.cpp" />
     <ClCompile Include="src\LinkedLists.cpp" />
     <ClCompile Include="src\Playground.cpp" />
+    <ClCompile Include="src\StacksAndQueues.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
